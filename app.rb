@@ -3,7 +3,7 @@ Bundler.require
 
 class Quiz < Sinatra::Application
 
-  get '/quiz' do
+  get '/' do
     erb :quiz
   end
 
@@ -14,10 +14,10 @@ class Quiz < Sinatra::Application
         array << v
         end
       end
-      if array.count('jayz') >=2
+      if array.count('jayz') >= 2
         @answer = "You are Jay Z"
       end
-      if array.count('kanye') >=2 
+      if array.count('kanye') >= 2 
         @answer1 = "You are Kanye"
     end
     erb :results
